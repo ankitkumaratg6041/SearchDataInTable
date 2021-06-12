@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Search Data in Table</title>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#">Sorting Data in a Table</a>
+    </nav>
+
+    <form class="form-control">
+        <input type="text" id="searchInput" placeholder="Search here..." onkeyup="searchFun()">
+    </form>
+
+    <div id="table-content">
+        <table class="table-data" id="myTable" border="1" cellspacing="10" cellpadding="20">
+            <tr>
+                <th>Rank</th> <th>Title</th> <th>Rating</th>
+            </tr>
+            <tr>
+                <td>05</td> <td>Death Note</td> <td>9.01</td>
+            </tr>
+            <tr>
+                <td>01</td> <td>Game Of Thrones</td> <td>9.97</td>
+            </tr>
+            <tr>
+                <td>04</td> <td>Bahubali</td> <td>9.21</td>
+            </tr>
+            <tr>
+                <td>06</td> <td>Conjuring 3</td> <td>8.99</td>
+            </tr>
+            <tr>
+                <td>02</td> <td>Breaking Bad</td> <td>9.96</td>
+            </tr>
+            <tr>
+                <td>03</td> <td>Stranger Things</td> <td>9.50</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function searchFun() {
+    let searchText = document.getElementById('searchInput').value.toUpperCase();
+
+    let tableContent = document.getElementById('myTable');
+    let tableRow = tableContent.getElementsByTagName('tr');
+
+    for(let index = 0; index < tableRow.length; index++) {
+        let td = tableRow[index].getElementsByTagName('td')[1];
+
+        if(td){
+            let textValue = td.textContent || td.innerHTML;
+            if(textValue.toUpperCase().indexOf(searchText) > -1){
+                tableRow[index].style.display = "";
+            } else {
+                tableRow[index].style.display = "none";
+            }
+        }
+    }
+}
+    </script>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(34, 34, 34);    
+}
+
+/* navbar styling */
+#navbar{
+    padding: 20px;
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+}
+
+#navbar a {
+    color: white;
+    font-family: lato, raleway, serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+/* input text styling */
+.form-control{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-control input{
+    padding: 10px 20px;
+    width: 50%;
+    border: 2px solid rgb(187, 187, 187);
+    background-color: #242424;
+    /* border: 2px solid #242424; */
+    border-radius: 10px;
+    font-family: lato,raleway;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.form-control input:focus{
+    border-color: #288eee;
+    box-shadow: 0px 0px 8px #83bbf3;
+    outline: none;
+    text-shadow: 0px 0px 1px #242424;
+    color: #fff;
+    /* color: #242424; */
+}
+
+/* table styling */
+#table-content{
+    padding: 20px;
+    margin-top: 2rem;
+    /* border: 2px solid red; */
+}
+
+.table-data{
+    margin: 0 auto;
+    padding: 15px;
+    width: 80%;
+    font-family: lato, raleway;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-shadow: 0px 1px 2px rgb(27, 27, 27);
+    border-collapse: collapse;
+    color: white;
+    /* border: 2px solid green; */
+}
+
+.table-data th{
+    font-size: 20px;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.table-data th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.table-data tr:nth-child(even){
+    background-color: rgb(49, 49, 49);
+    /* background-color: #f2f2f2; */
+}
+
+.table-data tr:hover{
+    background-color: rgb(39, 35, 35);
+    /* background-color: #ddd; */
+}
